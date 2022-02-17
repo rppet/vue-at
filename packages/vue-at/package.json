@@ -1,6 +1,6 @@
 {
   "name": "@rp-vue-cli/core",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "rp-vue-cli core modules",
   "author": "liushuai <ls57765867@126.com>",
   "homepage": "",
@@ -14,8 +14,6 @@
   ],
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"
-  },
-  "dependencies": {
   },
   "publishConfig": {
     "access": "public"
