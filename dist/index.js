@@ -914,7 +914,7 @@ var script = {
 
 script.__file = "src/AtTextarea.vue";
 
-const vueAt = script$1;
-const AtTextarea = script;
+const At = script$1;
+const AtTa = script;
 
-export { AtTextarea, vueAt };
+export { At, AtTa };
