@@ -1,5 +1,5 @@
-import At from './At.vue'
-import vueAtTextarea from './AtTextarea.vue'
+import VueAt from './At.vue'
+import VueAtTextarea from './AtTextarea.vue'
 import './index.css'
-export const At = At
-export const AtTa = vueAtTextarea
+export const At = VueAt
+export const AtTa = VueAtTextarea
