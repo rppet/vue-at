@@ -1,0 +1,23 @@
+{
+  "name": "@rp-vue-cli/core",
+  "version": "0.0.1",
+  "description": "rp-vue-cli core modules",
+  "author": "liushuai <ls57765867@126.com>",
+  "homepage": "",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "dependencies": {
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
