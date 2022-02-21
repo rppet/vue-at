@@ -103,6 +103,7 @@ export default {
     style () {
       if (this.atwho) {
         const { list, cur, x, y } = this.atwho
+        console.log(2)
         const { wrap } = this.$refs
         if (wrap) {
           const offset = getOffset(wrap)
@@ -370,7 +371,8 @@ export default {
       }
     },
 
-    scrollToCur () {
+    scrollToCur :function () {
+      console.log(this,3)
       const curEl = this.$refs.cur[0]
       const scrollParent = curEl.parentElement.parentElement // .atwho-view
       scrollIntoView(curEl, scrollParent)
@@ -465,6 +467,7 @@ export default {
       if (customsEmbedded) {
         // `suffix` is ignored as `customsEmbedded=true` has to be
         // wrapped around by spaces
+        console.log(4)
         const html = this.$refs.embeddedItem.firstChild.innerHTML
         this.insertHtml(html, r);
       } else {
