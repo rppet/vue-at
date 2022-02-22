@@ -93,7 +93,6 @@ export default {
     atItems () {
       return this.at ? [this.at] : this.ats
     },
-
     currentItem () {
       if (this.atwho) {
         return this.atwho.list[this.atwho.cur];
@@ -178,6 +177,7 @@ export default {
     handleItemClick (e) {
       this.selectByMouse(e)
       this.insertItem()
+      this.itemRefs = {}
     },
     handleDelete (e) {
       const range = getPrecedingRange()
@@ -256,10 +256,12 @@ export default {
           this.insertItem()
           e.preventDefault()
           e.stopPropagation()
+          this.itemRefs = {}
           return
         }
         if (e.keyCode === 27) { // esc
           this.closePanel()
+          this.itemRefs = {}
           return
         }
       }
@@ -275,6 +277,7 @@ export default {
 
       if (e.keyCode === 8) {
         this.handleDelete(e)
+        this.itemRefs = {}
       }
     },
 
@@ -472,7 +475,6 @@ export default {
       if (customsEmbedded) {
         // `suffix` is ignored as `customsEmbedded=true` has to be
         // wrapped around by spaces
-        console.log(4)
         const html = this.$refs.embeddedItem.firstChild.innerHTML
         this.insertHtml(html, r);
       } else {
