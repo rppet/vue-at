@@ -10,7 +10,6 @@ export default {
     style:function () {
       if (this.atwho) {
         const { list, cur, x, y } = this.atwho
-        console.log(1,this)
         const { wrap } = this.$refs
         const el = this.$el.querySelector('textarea')
         if (wrap) {

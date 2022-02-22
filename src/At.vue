@@ -85,7 +85,8 @@ export default {
       bindsValue: this.value != null,
       customsEmbedded: false,
       hasComposition: false,
-      atwho: null
+      atwho: null,
+      itemRefs:{}
     }
   },
   computed: {
@@ -144,6 +145,11 @@ export default {
   },
 
   methods: {
+    setItemRef(el, index) {
+      if (!this.itemRefs[index]) {
+        this.itemRefs[index] = el
+      }
+    },
     itemName (v) {
       const { nameKey } = this
       return nameKey ? v[nameKey] : v
@@ -372,8 +378,7 @@ export default {
     },
 
     scrollToCur :function () {
-      console.log(this,3)
-      const curEl = this.$refs.cur[0]
+      const curEl = this.itemRefs[this.atwho.cur]
       const scrollParent = curEl.parentElement.parentElement // .atwho-view
       scrollIntoView(curEl, scrollParent)
     },

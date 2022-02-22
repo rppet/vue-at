@@ -4,6 +4,6 @@ export default {
   output: {
     name:'file',
     file: 'dist/index.js',
-    format: 'es'
+    format: 'esm'
   }
 }
